@@ -10,7 +10,12 @@
 
 // フォント関係
 
-// フォント関係ここまで
+.mont {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 // $breakpoints: (
 //   "sm": "screen and (max-width: 576px)",
