@@ -1,1 +1,47 @@
 @use "../foundation/" as f;
+
+.l-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  &.is-scrolled {
+    background-color: f.$header-bg;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 2.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: f.$text-color-w;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px; // ← 文字の6px下
+      width: 100%;
+      height: 1px;
+      background-color: f.$text-color-w;
+      transform: scaleX(0);
+      transform-origin: left; // ← 左から伸びる
+      transition: transform 0.3s ease;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}

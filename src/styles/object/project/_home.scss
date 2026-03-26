@@ -7,21 +7,22 @@
     @include f.mq(md) {
       padding: 28rem 0;
     }
-  }
-  .p-hero__title {
-    font-size: f.fs(72);
-    color: f.$text-color-w;
-  }
-  .p-hero__subtitle {
-    font-size: f.fs(24);
-    color: f.$text-color-w;
-    font-weight: normal;
-    margin-top: 2rem;
-  }
-  .p-hero__button {
-    margin-top: 5rem;
-    @include f.mq(md) {
-      margin-top: 3rem;
+    &__title {
+      font-size: f.fs(72);
+      color: f.$text-color-w;
+      letter-spacing: 0.05em;
+    }
+    &__subtitle {
+      font-size: f.fs(24);
+      color: f.$text-color-w;
+      font-weight: normal;
+      margin-top: 2rem;
+    }
+    &__button {
+      margin-top: 5rem;
+      @include f.mq(md) {
+        margin-top: 3rem;
+      }
     }
   }
 }
