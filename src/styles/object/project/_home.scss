@@ -1,24 +1,24 @@
-@use "../foundation/" as f;
+@use "../../foundation/" as f;
 
-.page-home {
-  .hero {
+.p-page-home {
+  .p-hero {
     padding: 32rem 0;
-    background: url(../../images/hero.jpg) no-repeat center/cover;
+    background: url(../../../images/hero.jpg) no-repeat center/cover;
     @include f.mq(md) {
       padding: 28rem 0;
     }
   }
-  .hero__title {
+  .p-hero__title {
     font-size: f.fs(72);
     color: f.$text-color-w;
   }
-  .hero__subtitle {
+  .p-hero__subtitle {
     font-size: f.fs(24);
     color: f.$text-color-w;
     font-weight: normal;
     margin-top: 2rem;
   }
-  .hero__button {
+  .p-hero__button {
     margin-top: 5rem;
     @include f.mq(md) {
       margin-top: 3rem;
