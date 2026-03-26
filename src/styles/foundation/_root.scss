@@ -3,37 +3,37 @@
 @use "./variables" as v;
 @use "sass:map";
 
-:root {
-  // 余白の書き出し
-  // vにある$spacesから値を引っ張ってくる
-  @each $key, $val in v.$spaces {
-    --sp-#{$key}: #{$val};
-  }
+// :root {
+//   // 余白の書き出し
+//   // vにある$spacesから値を引っ張ってくる
+//   @each $key, $val in v.$spaces {
+//     --sp-#{$key}: #{$val};
+//   }
 
-  // フォントサイズの書き出し
-  @each $key, $val in v.$font-sizes {
-    --fs-#{$key}: #{$val};
-  }
+//   // フォントサイズの書き出し
+//   @each $key, $val in v.$font-sizes {
+//     --fs-#{$key}: #{$val};
+//   }
 
-  // Tablet（1024px以下）
-  // $lg ではなく、Mapから "lg" の値を引っ張ってくる
-  @media #{map.get(v.$breakpoints, "lg")} {
-    @each $key, $val in v.$font-sizes-tab {
-      --fs-#{$key}: #{$val};
-    }
-    @each $key, $val in v.$spaces-tab {
-      --sp-#{$key}: #{$val};
-    }
-  }
+//   // Tablet（1024px以下）
+//   // $lg ではなく、Mapから "lg" の値を引っ張ってくる
+//   @media #{map.get(v.$breakpoints, "lg")} {
+//     @each $key, $val in v.$font-sizes-tab {
+//       --fs-#{$key}: #{$val};
+//     }
+//     @each $key, $val in v.$spaces-tab {
+//       --sp-#{$key}: #{$val};
+//     }
+//   }
 
-  // Mobile（768px以下）
-  // $md ではなく、Mapから "md" の値を引っ張ってくる
-  @media #{map.get(v.$breakpoints, "md")} {
-    @each $key, $val in v.$font-sizes-sp {
-      --fs-#{$key}: #{$val};
-    }
-    @each $key, $val in v.$spaces-sp {
-      --sp-#{$key}: #{$val};
-    }
-  }
-}
+//   // Mobile（768px以下）
+//   // $md ではなく、Mapから "md" の値を引っ張ってくる
+//   @media #{map.get(v.$breakpoints, "md")} {
+//     @each $key, $val in v.$font-sizes-sp {
+//       --fs-#{$key}: #{$val};
+//     }
+//     @each $key, $val in v.$spaces-sp {
+//       --sp-#{$key}: #{$val};
+//     }
+//   }
+// }
