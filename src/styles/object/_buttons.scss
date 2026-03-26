@@ -4,3 +4,22 @@
 // ボタンデザイン
 
 // 共通のスタイルをc-buttonに書いて、.c-button--primary、.c-button--secondaryなどで固有スタイルを書くとよい
+.c-button {
+  padding: f.sp(18) f.sp(72);
+  color: f.$text-color-w;
+  border: f.$text-color-w solid 1px;
+  border-radius: 50px;
+  position: relative;
+  &::after {
+    content: "▶";
+    font-size: 1rem;
+    color: f.$text-color-w;
+    position: absolute;
+    top: 40%;
+    right: 8%;
+  }
+}
+
+.c-button--trans {
+  background-color: transparent;
+}

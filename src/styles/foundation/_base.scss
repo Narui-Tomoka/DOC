@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // サイト全体の基本スタイルを書く
 // 例
 // body {
@@ -22,8 +24,7 @@ body {
   font-size: 1.6rem; // 10pxを16pxに調整
   font-feature-settings: "palt" 1;
   font-family:
-    "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo",
-    sans-serif;
+    Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -37,9 +38,8 @@ body {
 }
 
 a {
-  color: #000;
   text-decoration: none;
-  display: block;
+  display: inline-block;
 }
 
 li {
@@ -66,4 +66,39 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none; /* デフォルトの枠を消す */
+}
+
+:root {
+  // 余白の書き出し
+  // vにある$spacesから値を引っ張ってくる
+  @each $key, $val in v.$spaces {
+    --sp-#{$key}: #{$val};
+  }
+
+  // フォントサイズの書き出し
+  @each $key, $val in v.$font-sizes {
+    --fs-#{$key}: #{$val};
+  }
+
+  // Tablet（1024px以下）
+  // $lg ではなく、Mapから "lg" の値を引っ張ってくる
+  @media #{map.get(v.$breakpoints, "lg")} {
+    @each $key, $val in v.$font-sizes-tab {
+      --fs-#{$key}: #{$val};
+    }
+    @each $key, $val in v.$spaces-tab {
+      --sp-#{$key}: #{$val};
+    }
+  }
+
+  // Mobile（768px以下）
+  // $md ではなく、Mapから "md" の値を引っ張ってくる
+  @media #{map.get(v.$breakpoints, "md")} {
+    @each $key, $val in v.$font-sizes-sp {
+      --fs-#{$key}: #{$val};
+    }
+    @each $key, $val in v.$spaces-sp {
+      --sp-#{$key}: #{$val};
+    }
+  }
 }
