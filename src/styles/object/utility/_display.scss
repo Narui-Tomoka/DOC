@@ -1,0 +1,14 @@
+@use "../../foundation/" as f;
+
+.u-pc-only {
+  @include f.mq(md) {
+    display: none;
+  }
+}
+
+.u-sp-only {
+  display: none;
+  @include f.mq(md) {
+    display: block;
+  }
+}
