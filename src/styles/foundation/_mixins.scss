@@ -1,0 +1,33 @@
+// 再利用するスタイルの“型”
+@use "./variables" as vars;
+@use "./functions" as func;
+@use "sass:map";
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+// ↑使い方例
+// .head .head-sns_link a {
+//   @include hover {
+//     opacity: 0.7;
+//   }
+// }
+
+// ==========================================================================
+// メディアクエリ（ブレイクポイント用）
+// ==========================================================================
+
+@mixin mq($breakpoint) {
+  @media #{map.get(vars.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// 書き方 (セレクタ内に書く)
+//  @include mix.mq(tab) {
+// ここにスタイルを書く
+//   }

@@ -1,0 +1,6 @@
+@use "../foundation/" as f;
+@use "sass:color"; // color.adjust()を使うのに必須
+
+// ボタンデザイン
+
+// 共通のスタイルをc-buttonに書いて、.c-button--primary、.c-button--secondaryなどで固有スタイルを書くとよい
