@@ -27,6 +27,8 @@
     display: inline-block;
     color: f.$text-color-w;
     text-decoration: none;
+    letter-spacing: 0.05em;
+    font-weight: bold;
 
     &::after {
       content: "";
