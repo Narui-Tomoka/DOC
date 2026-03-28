@@ -1,30 +1,50 @@
 @use "../foundation/" as f;
 
 .l-footer {
-  padding: 6rem 0;
+  padding: 6rem 3rem;
   background-color: f.$footer-bg;
+
   &__nav {
+    /* PCでは2つのrowを横に並べて、結果として1行に見せる */
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    width: fit-content;
+    margin: 0 auto;
   }
+
+  &__row {
+    display: flex;
+    gap: 2rem;
+  }
+
   &__link {
-    margin-right: 2rem;
     color: f.$text-color-w;
     letter-spacing: 0.1em;
-    @include f.mq(md) {
-      margin-right: 1rem;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
   }
+
   &__copy {
     text-align: center;
     margin-top: 3rem;
     letter-spacing: 0.05em;
+
     &-link {
       color: f.$footer-copy;
+    }
+  }
+
+  @include f.mq(md) {
+    &__nav {
+      /* スマホではrowを縦に並べる */
+      flex-direction: column;
+      align-items: flex-start; // columnなので左揃えになる
+    }
+
+    &__row {
+      justify-content: flex-start;
+      gap: 1rem;
     }
   }
 }
