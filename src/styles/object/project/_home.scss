@@ -7,6 +7,20 @@
     @include f.mq(md) {
       padding: 28rem 0;
     }
+    &__inner {
+      max-width: 1110px;
+      margin-inline: auto;
+      padding-inline: 3rem; // スマホ時の最低余白（15px）
+
+      text-align: center;
+      @media (min-width: 1140px) {
+        // 1110px + (15px * 2)
+        padding-inline: 0; // 画面幅に十分な余裕があればpaddingを消す
+      }
+      @include f.mq(md) {
+        text-align: left;
+      }
+    }
     &__title {
       font-size: f.fs(72);
       color: f.$text-color-w;
@@ -18,6 +32,7 @@
       font-weight: normal;
       margin-top: 2rem;
     }
+
     &__button {
       margin-top: 5rem;
       @include f.mq(md) {
