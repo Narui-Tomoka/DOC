@@ -10,6 +10,11 @@
   border: f.$text-color-w solid 1px;
   border-radius: 50px;
   position: relative;
+  @include f.hover {
+    &::after {
+      right: 7%;
+    }
+  }
   &::after {
     content: "▶";
     font-size: 1rem;
@@ -17,9 +22,14 @@
     position: absolute;
     top: 40%;
     right: 8%;
+    transition: all 0.3s ease;
   }
 }
 
 .c-button--trans {
   background-color: transparent;
+  transition: all 0.3s ease;
+  @include f.hover {
+    opacity: 0.7;
+  }
 }
