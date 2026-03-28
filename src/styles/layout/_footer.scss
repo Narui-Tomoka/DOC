@@ -21,6 +21,7 @@
   }
 
   &__link {
+    font-size: 1.2rem;
     color: f.$text-color-w;
     letter-spacing: 0.1em;
   }
@@ -31,6 +32,7 @@
     letter-spacing: 0.05em;
 
     &-link {
+      font-size: 1rem;
       color: f.$footer-copy;
     }
   }
