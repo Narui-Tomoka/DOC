@@ -8,21 +8,31 @@
   padding: 3rem;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 100;
   background-color: transparent;
   transition: background-color 0.3s ease;
+
   &.is-scrolled {
     background-color: f.$header-bg;
   }
+
+  // =========================
+  // PC用ナビ
+  // =========================
   &__list {
     display: flex;
   }
+
   &__item {
     font-size: 1.4rem;
     margin-right: 2.5rem;
+
     &:last-child {
       margin-right: 0;
     }
   }
+
   &__link {
     position: relative;
     display: inline-block;
@@ -35,16 +45,148 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -6px; // ← 文字の6px下
+      bottom: -6px;
       width: 100%;
       height: 1px;
       background-color: f.$text-color-w;
       transform: scaleX(0);
-      transform-origin: left; // ← 左から伸びる
+      transform-origin: left;
       transition: transform 0.3s ease;
     }
+
     &:hover::after {
       transform: scaleX(1);
+    }
+  }
+
+  // =========================
+  // ハンバーガーボタン
+  // 初期状態では非表示
+  // =========================
+  &__hamburger {
+    display: none;
+    position: relative;
+    width: 3.2rem;
+    height: 2.4rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 120; // 全画面メニューより上に置く
+  }
+
+  &__hamburger-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: f.$text-color-w;
+    border-radius: 999px;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      top 0.3s ease;
+
+    // 1本目
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    // 2本目
+    &:nth-child(2) {
+      top: 1.1rem;
+    }
+
+    // 3本目
+    &:nth-child(3) {
+      top: 2.2rem;
+    }
+  }
+
+  // =========================
+  // スマホ用全画面メニュー
+  // 初期状態では非表示
+  // =========================
+  &__sp-nav {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: f.$bg-gradient;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 110;
+  }
+
+  &__sp-list {
+    text-align: center;
+  }
+
+  &__sp-item {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sp-link {
+    color: f.$text-color-w;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  // =========================
+  // メニューが開いた時の見た目
+  // .l-header に is-open が付く想定
+  // =========================
+  &.is-open {
+    .l-header__sp-nav {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .l-header__hamburger-line {
+      &:nth-child(1) {
+        top: 1.1rem;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 1.1rem;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  // =========================
+  // スマホ表示
+  // 768px以下で切り替え
+  // =========================
+  @include f.mq(md) {
+    padding: 2rem 1.5rem;
+
+    // PCメニューは非表示
+    &__list {
+      display: none;
+    }
+
+    // ハンバーガーは表示
+    &__hamburger {
+      display: block;
     }
   }
 }

@@ -29,6 +29,11 @@ body {
   font-style: normal;
 }
 
+// スマホメニューが開いている時、背景ページのスクロールを止める
+body.is-fixed {
+  overflow: hidden;
+}
+
 *,
 ::before,
 ::after {
