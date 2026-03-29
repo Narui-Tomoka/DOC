@@ -73,14 +73,6 @@ textarea:focus {
   outline: none; /* デフォルトの枠を消す */
 }
 
-// フォント
-.f-mont {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
 :root {
   // 余白の書き出し
   // vにある$spacesから値を引っ張ってくる

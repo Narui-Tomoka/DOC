@@ -24,6 +24,7 @@
     &__title {
       font-size: f.fs(72);
       color: f.$text-color-w;
+      line-height: 1.1;
       letter-spacing: 0.05em;
     }
     &__subtitle {
@@ -31,6 +32,8 @@
       color: f.$text-color-w;
       font-weight: normal;
       margin-top: 2rem;
+      line-height: 1.8;
+      letter-spacing: 0.1em;
     }
 
     &__button {
@@ -39,5 +42,136 @@
         margin-top: 3rem;
       }
     }
+  }
+
+  // ==========================================
+  // NEWS section
+  // ==========================================
+  .p-news {
+    // セクション全体の上下余白
+    padding: f.sp(70) 0;
+
+    &__inner {
+      // PCでは「見出し」と「一覧」を横並びにする
+      display: flex;
+      align-items: flex-start;
+
+      @include f.mq(md) {
+        // スマホでは縦並びに変更
+        display: block;
+      }
+    }
+
+    &__heading {
+      // 左側の見出しエリアの幅を固定気味にしておく
+      flex: 0 0 140px;
+
+      @include f.mq(md) {
+        // スマホでは下に余白をつけて一覧と離す
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-heading__title,
+    &-heading__sub {
+      text-align: left;
+      // このセクションタイトルのみ左寄せなので上書き
+      @include f.mq(md) {
+        text-align: center;
+      }
+    }
+
+    &__body {
+      // 右側のニュース一覧を残り幅いっぱいに広げる
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  // ==========================================
+  // NEWS list
+  // ==========================================
+  .p-news-list {
+    &__item {
+      // 各記事の間隔
+      margin-bottom: 1.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include f.mq(md) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__link {
+      // 1件分をクリックできるようにする
+      display: flex;
+      align-items: flex-start;
+      text-decoration: none;
+      color: inherit;
+
+      @include f.mq(md) {
+        // スマホでは meta の下に本文が来るように縦並び
+        display: block;
+      }
+    }
+
+    &__meta {
+      // 日付 + ラベルのまとまり
+      display: flex;
+      align-items: center;
+      flex: 0 0 190px;
+      margin-right: 2rem;
+
+      @include f.mq(md) {
+        // スマホでは本文の上に来るので横幅固定を解除
+        flex: none;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__date {
+      // 日付部分
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #333;
+      white-space: nowrap;
+      letter-spacing: 0.1em;
+    }
+
+    &__label {
+      // カテゴリーラベル
+      @include f.label;
+
+      @include f.mq(md) {
+        margin-left: 1.2rem;
+      }
+    }
+
+    &__text {
+      // ニュース本文
+      flex: 1;
+      min-width: 0;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      color: #333;
+
+      @include f.mq(md) {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  // ==========================================
+  // SERVICE section
+  // ==========================================
+  .p-service {
+    padding: f.sp(70) 0;
   }
 }

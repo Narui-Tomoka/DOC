@@ -9,3 +9,28 @@
 //   margin-top: f.sp(24);
 //   line-height: 1.5;
 // }
+// ==========================================
+// 共通見出し
+// ==========================================
+.c-section-heading {
+  &__title {
+    color: f.$head-color;
+    font-size: f.fs(36);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    display: block;
+    text-align: center;
+  }
+
+  &__sub {
+    margin-top: 0.6rem;
+    color: f.$head-color;
+    font-size: 1.3rem; // SPでも大きさ変わらない
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    display: block;
+    text-align: center;
+  }
+}

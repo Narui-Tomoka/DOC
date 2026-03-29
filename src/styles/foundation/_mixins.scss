@@ -27,7 +27,21 @@
   }
 }
 
-// 書き方 (セレクタ内に書く)
-//  @include mix.mq(tab) {
-// ここにスタイルを書く
-//   }
+// カテゴリーラベル
+@mixin label($min-width: 8.2rem, $height: 2.2rem, $margin-left: 2rem) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $min-width;
+  height: $height;
+  margin-left: $margin-left;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background-color: #e8e8e8;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #555;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}

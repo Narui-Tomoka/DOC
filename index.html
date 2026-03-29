@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="src/images/favicon.ico" />
@@ -19,22 +19,22 @@
       </a>
       <ul class="l-header__list u-pc-only">
         <li class="l-header__item">
-          <a href="#" class="l-header__link">NEWS</a>
+          <a href="#" class="l-header__link u-font-mont-bold">NEWS</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link">SERVICE</a>
+          <a href="#" class="l-header__link u-font-mont-bold">SERVICE</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link">WORKS</a>
+          <a href="#" class="l-header__link u-font-mont-bold">WORKS</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link">COMPANY</a>
+          <a href="#" class="l-header__link u-font-mont-bold">COMPANY</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link">RECRUIT</a>
+          <a href="#" class="l-header__link u-font-mont-bold">RECRUIT</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link">CONTACT</a>
+          <a href="#" class="l-header__link u-font-mont-bold">CONTACT</a>
         </li>
       </ul>
 
@@ -55,22 +55,22 @@
       <nav id="sp-nav" class="l-header__sp-nav" aria-hidden="true">
         <ul class="l-header__sp-list">
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">NEWS</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">NEWS</a>
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">SERVICE</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">SERVICE</a>
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">WORKS</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">WORKS</a>
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">COMPANY</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">COMPANY</a>
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">RECRUIT</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">RECRUIT</a>
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link">CONTACT</a>
+            <a href="#" class="l-header__sp-link u-font-mont-bold">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -80,39 +80,116 @@
       <section id="hero" class="p-hero">
         <!-- 文字が画面端にくっついてしまわないために幅を制限 -->
         <div class="p-hero__inner">
-          <h1 class="p-hero__title f-mont">WEB DESIGN SPECIALIST</h1>
-          <h2 class="p-hero__subtitle">お客様の夢を叶えるWebサイトを制作</h2>
-          <a href="#" class="p-hero__button c-button c-button--trans"
+          <h1 class="p-hero__title u-font-mont-bold">WEB DESIGN SPECIALIST</h1>
+          <h2 class="p-hero__subtitle">
+            お客様の夢を叶える<br class="u-sp-only" />Webサイトを制作
+          </h2>
+          <a
+            href="#"
+            class="p-hero__button c-button c-button--trans u-font-mont-bold"
             >CONTACT</a
           >
         </div>
       </section>
-      <section id="news" class="p-news">
-        <h2 class="p-news__title">
-          <span class="p-news__title--en">NEWS</span>
-          <span class="p-news__title--ja">お知らせ</span>
-        </h2>
+
+      <section class="p-news">
+        <div class="p-news__inner l-inner l-inner--narrow">
+          <h2 class="p-news__heading c-section-heading">
+            <span
+              class="c-section-heading__title p-news-heading__title u-font-mont-bold"
+              >NEWS</span
+            >
+            <span class="c-section-heading__sub p-news-heading__sub"
+              >お知らせ</span
+            >
+          </h2>
+
+          <div class="p-news__body">
+            <ul class="p-news-list">
+              <li class="p-news-list__item">
+                <a href="news.html" class="p-news-list__link">
+                  <div class="p-news-list__meta">
+                    <time
+                      class="p-news-list__date u-font-mont"
+                      datetime="2030-02-01"
+                      >2030.02.01</time
+                    >
+                    <span class="p-news-list__label">お知らせ</span>
+                  </div>
+                  <span class="p-news-list__text">
+                    Webデザイナーコースサイト「ウェブマガジン」に掲載いただきました
+                  </span>
+                </a>
+              </li>
+
+              <li class="p-news-list__item">
+                <a href="#" class="p-news-list__link">
+                  <div class="p-news-list__meta">
+                    <time
+                      class="p-news-list__date u-font-mont"
+                      datetime="2030-01-25"
+                      >2030.01.25</time
+                    >
+                    <span class="p-news-list__label">制作実績</span>
+                  </div>
+                  <span class="p-news-list__text">
+                    Smoothiesta様のWebサイトを制作いたしました
+                  </span>
+                </a>
+              </li>
+
+              <li class="p-news-list__item">
+                <a href="#" class="p-news-list__link">
+                  <div class="p-news-list__meta">
+                    <time
+                      class="p-news-list__date u-font-mont"
+                      datetime="2030-01-20"
+                      >2030.01.20</time
+                    >
+                    <span class="p-news-list__label">採用</span>
+                  </div>
+                  <span class="p-news-list__text">
+                    Webデザイナーを1名募集中です！
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="p-service">
+        <div class="p-service__inner l-inner">
+          <h2 class="p-service__heading c-section-heading">
+            <span class="c-section-heading__title u-font-mont-bold"
+              >SERVICE</span
+            >
+            <span class="c-section-heading__sub">事業内容</span>
+          </h2>
+        </div>
       </section>
     </main>
 
     <footer id="footer" class="l-footer">
       <nav class="l-footer__nav">
         <div class="l-footer__row">
-          <a href="index.html" class="l-footer__link">HOME</a>
-          <a href="#" class="l-footer__link">NEWS</a>
-          <a href="#" class="l-footer__link">SERVICE</a>
-          <a href="#" class="l-footer__link">WORKS</a>
+          <a href="index.html" class="l-footer__link u-font-mont">HOME</a>
+          <a href="#" class="l-footer__link u-font-mont">NEWS</a>
+          <a href="#" class="l-footer__link u-font-mont">SERVICE</a>
+          <a href="#" class="l-footer__link u-font-mont">WORKS</a>
         </div>
 
         <div class="l-footer__row">
-          <a href="#" class="l-footer__link">COMPANY</a>
-          <a href="#" class="l-footer__link">RECRUIT</a>
-          <a href="#" class="l-footer__link">CONTACT</a>
+          <a href="#" class="l-footer__link u-font-mont">COMPANY</a>
+          <a href="#" class="l-footer__link u-font-mont">RECRUIT</a>
+          <a href="#" class="l-footer__link u-font-mont">CONTACT</a>
         </div>
       </nav>
 
       <div class="l-footer__copy">
-        <a href="index.html" class="l-footer__copy-link">© PON DESIGN</a>
+        <a href="index.html" class="l-footer__copy-link u-font-mont"
+          >© PON DESIGN</a
+        >
       </div>
     </footer>
     <a href="#" class="c-pagetop" aria-label="ページトップへ戻る">

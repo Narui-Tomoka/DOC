@@ -7,4 +7,9 @@
     // 1110px + (15px * 2)
     padding-inline: 0; // 画面幅に十分な余裕があればpaddingを消す
   }
+
+  // 幅バリエーション
+  &--narrow {
+    max-width: 840px;
+  }
 }
