@@ -2,23 +2,19 @@
 
 .p-page-home {
   .p-hero {
+    position: relative; // スクロールインジケーターの配置基準
     padding: 32rem 0;
     background: url(../../../images/hero.jpg) no-repeat center/cover;
     @include f.mq(md) {
       padding: 28rem 0;
     }
     &__inner {
-      max-width: 1110px;
-      margin-inline: auto;
-      padding-inline: 3rem; // スマホ時の最低余白（15px）
+      // l-innerに上書き・追加したい設定のみp-hero__innerで追加
+      padding-inline: 3rem; // 1.5rem→3rem
+      text-align: center; // 追加
 
-      text-align: center;
-      @media (min-width: 1140px) {
-        // 1110px + (15px * 2)
-        padding-inline: 0; // 画面幅に十分な余裕があればpaddingを消す
-      }
       @include f.mq(md) {
-        text-align: left;
+        text-align: left; // 追加
       }
     }
     &__title {
@@ -40,6 +36,37 @@
       margin-top: 5rem;
       @include f.mq(md) {
         margin-top: 3rem;
+      }
+    }
+
+    // ==========================================
+    // scroll indicator
+    // ==========================================
+    &__scroll {
+      position: absolute;
+      right: 3rem;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: f.$text-color-w;
+
+      @include f.mq(md) {
+        right: 1.5rem;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 8rem;
+        margin-top: 1.2rem;
+        background-color: f.$text-color-w;
+        animation: scroll-line 2s ease-in-out infinite;
+      }
+
+      &-text {
+        writing-mode: vertical-rl;
       }
     }
   }
@@ -173,5 +200,47 @@
   // ==========================================
   .p-service {
     padding: f.sp(70) 0;
+
+    &__list {
+      display: flex;
+      margin-top: 3rem;
+      gap: 3rem;
+      @include f.mq(md) {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+      }
+    }
+
+    &__item {
+      max-width: 35rem;
+      @include f.mq(md) {
+        max-width: 100%;
+      }
+    }
+    &__img {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// ==========================================
+// scroll animation
+// ==========================================
+@keyframes scroll-line {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
   }
 }

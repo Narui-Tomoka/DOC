@@ -1,5 +1,8 @@
 export function initPageTop() {
-  const pageTopBtn = document.querySelector(".page-top");
+  // ページトップボタン本体を取得
+  const pageTopBtn = document.querySelector(".c-pagetop");
+
+  // heroセクションを取得
   const hero = document.querySelector("#hero");
 
   // 必要な要素がなければ処理しない
@@ -7,14 +10,18 @@ export function initPageTop() {
     return;
   }
 
+  // =====================================
+  // hero の表示状態を監視して、
+  // ページトップボタンの表示・非表示を切り替える
+  // =====================================
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // fvが見えてる＝トップ付近 → 非表示
+          // hero が見えている間は非表示
           pageTopBtn.classList.add("is-hidden");
         } else {
-          // fvが見えなくなった → 表示
+          // hero が見えなくなったら表示
           pageTopBtn.classList.remove("is-hidden");
         }
       });
@@ -25,5 +32,16 @@ export function initPageTop() {
     },
   );
 
+  // hero の監視を開始
   observer.observe(hero);
+
+  // =====================================
+  // ボタンを押したらページトップへ戻る
+  // =====================================
+  pageTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 }

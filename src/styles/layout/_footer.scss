@@ -24,6 +24,10 @@
     font-size: 1.2rem;
     color: f.$text-color-w;
     letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+    @include f.hover {
+      opacity: 0.7;
+    }
   }
 
   &__copy {
@@ -34,6 +38,10 @@
     &-link {
       font-size: 1rem;
       color: f.$footer-copy;
+      transition: opacity 0.3s ease;
+      @include f.hover {
+        opacity: 0.7;
+      }
     }
   }
 

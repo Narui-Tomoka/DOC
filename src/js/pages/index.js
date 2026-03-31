@@ -7,11 +7,9 @@ import "../../styles/style.scss";
 // modules の読み込み
 // ================================
 
-// ハンバーガーメニューの開閉処理
-import { initHamburger } from "../modules/hamburger";
-
-// ページトップボタンの処理
+// ページトップボタン/ハンバーガーメニューの開閉処理
 import { initPageTop } from "../modules/pagetop";
+import { initHamburger } from "../modules/hamburger";
 
 // ================================
 // 初期化処理

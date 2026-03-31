@@ -9,32 +9,44 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="icon" href="src/images/favicon.ico" />
     <title>PON DESIGN | トップページ</title>
   </head>
   <body class="p-page-home">
     <header id="header" class="l-header">
-      <a href="#" class="l-header__logo">
+      <a href="index.html" class="l-header__logo">
         <img src="src/images/logo.svg" alt="PON DESIGNロゴ" />
       </a>
       <ul class="l-header__list u-pc-only">
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">NEWS</a>
+          <a href="news.html" class="l-header__link u-font-mont-bold">NEWS</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">SERVICE</a>
+          <a href="service.html" class="l-header__link u-font-mont-bold"
+            >SERVICE</a
+          >
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">WORKS</a>
+          <a href="works.html" class="l-header__link u-font-mont-bold">WORKS</a>
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">COMPANY</a>
+          <a href="company.html" class="l-header__link u-font-mont-bold"
+            >COMPANY</a
+          >
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">RECRUIT</a>
+          <a href="recruit.html" class="l-header__link u-font-mont-bold"
+            >RECRUIT</a
+          >
         </li>
         <li class="l-header__item">
-          <a href="#" class="l-header__link u-font-mont-bold">CONTACT</a>
+          <a href="contact.html" class="l-header__link u-font-mont-bold"
+            >CONTACT</a
+          >
         </li>
       </ul>
 
@@ -55,22 +67,34 @@
       <nav id="sp-nav" class="l-header__sp-nav" aria-hidden="true">
         <ul class="l-header__sp-list">
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">NEWS</a>
+            <a href="news.html" class="l-header__sp-link u-font-mont-bold"
+              >NEWS</a
+            >
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">SERVICE</a>
+            <a href="service.html" class="l-header__sp-link u-font-mont-bold"
+              >SERVICE</a
+            >
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">WORKS</a>
+            <a href="works.html" class="l-header__sp-link u-font-mont-bold"
+              >WORKS</a
+            >
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">COMPANY</a>
+            <a href="company.html" class="l-header__sp-link u-font-mont-bold"
+              >COMPANY</a
+            >
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">RECRUIT</a>
+            <a href="recruit.html" class="l-header__sp-link u-font-mont-bold"
+              >RECRUIT</a
+            >
           </li>
           <li class="l-header__sp-item">
-            <a href="#" class="l-header__sp-link u-font-mont-bold">CONTACT</a>
+            <a href="contact.html" class="l-header__sp-link u-font-mont-bold"
+              >CONTACT</a
+            >
           </li>
         </ul>
       </nav>
@@ -79,16 +103,22 @@
     <main>
       <section id="hero" class="p-hero">
         <!-- 文字が画面端にくっついてしまわないために幅を制限 -->
-        <div class="p-hero__inner">
+        <div class="l-inner p-hero__inner">
           <h1 class="p-hero__title u-font-mont-bold">WEB DESIGN SPECIALIST</h1>
           <h2 class="p-hero__subtitle">
             お客様の夢を叶える<br class="u-sp-only" />Webサイトを制作
           </h2>
           <a
-            href="#"
+            href="contact.html"
             class="p-hero__button c-button c-button--trans u-font-mont-bold"
             >CONTACT</a
           >
+        </div>
+
+        <!-- スクロールインジケーター -->
+        <!-- 見た目用の要素なので読み上げ不要にするaria-hidden="true"を設定 -->
+        <div class="p-hero__scroll" aria-hidden="true">
+          <span class="p-hero__scroll-text u-font-mont-bold">SCROLL</span>
         </div>
       </section>
 
@@ -166,23 +196,73 @@
             >
             <span class="c-section-heading__sub">事業内容</span>
           </h2>
+
+          <ul class="p-service__list">
+            <li class="p-service__item">
+              <div class="p-service__img">
+                <img
+                  src="src/images/service01.jpg"
+                  alt="サービスイメージ画像"
+                />
+              </div>
+              <div class="p-service__text">
+                <h3 class="p-service__title">Webサイト制作</h3>
+                <p class="p-service__discription">
+                  新規サイトの制作はもちろんリニューアルやランディングページの制作も可能です。
+                </p>
+              </div>
+            </li>
+
+            <li class="p-service__item">
+              <div class="p-service__img">
+                <img
+                  src="src/images/service02.jpg"
+                  alt="サービスイメージ画像"
+                />
+              </div>
+              <div class="p-service__text">
+                <h3 class="p-service__title">Webサイト運用</h3>
+                <p class="p-service__discription">
+                  サイトの更新作業や独自のアクセス分析に基づいたサイト改善のご提案をいたします。
+                </p>
+              </div>
+            </li>
+
+            <li class="p-service__item">
+              <div class="p-service__img">
+                <img
+                  src="src/images/service03.jpg"
+                  alt="サービスイメージ画像"
+                />
+              </div>
+              <div class="p-service__text">
+                <h3 class="p-service__title">アプリ開発</h3>
+                <p class="p-service__discription">
+                  スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリ開発が可能です。
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
+
+      <!-- <section id="works" class="p-works"></section> -->
+      <!-- スライダー実装 -->
     </main>
 
     <footer id="footer" class="l-footer">
       <nav class="l-footer__nav">
         <div class="l-footer__row">
           <a href="index.html" class="l-footer__link u-font-mont">HOME</a>
-          <a href="#" class="l-footer__link u-font-mont">NEWS</a>
-          <a href="#" class="l-footer__link u-font-mont">SERVICE</a>
-          <a href="#" class="l-footer__link u-font-mont">WORKS</a>
+          <a href="news.html" class="l-footer__link u-font-mont">NEWS</a>
+          <a href="service.html" class="l-footer__link u-font-mont">SERVICE</a>
+          <a href="works.html" class="l-footer__link u-font-mont">WORKS</a>
         </div>
 
         <div class="l-footer__row">
-          <a href="#" class="l-footer__link u-font-mont">COMPANY</a>
-          <a href="#" class="l-footer__link u-font-mont">RECRUIT</a>
-          <a href="#" class="l-footer__link u-font-mont">CONTACT</a>
+          <a href="company.html" class="l-footer__link u-font-mont">COMPANY</a>
+          <a href="recruit.html" class="l-footer__link u-font-mont">RECRUIT</a>
+          <a href="contact.html" class="l-footer__link u-font-mont">CONTACT</a>
         </div>
       </nav>
 
@@ -193,7 +273,7 @@
       </div>
     </footer>
     <a href="#" class="c-pagetop" aria-label="ページトップへ戻る">
-      <span class="c-pagetop__arrow"></span>
+      <span class="c-pagetop__arrow"><i class="fa-solid fa-arrow-up"></i></span>
     </a>
     <script type="module" src="/src/js/pages/index.js"></script>
   </body>
