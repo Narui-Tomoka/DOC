@@ -246,6 +246,40 @@
       margin-top: 3rem;
     }
   }
+
+  .p-works {
+    padding-top: 6rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include f.mq(md) {
+      padding-top: 3rem;
+      padding-left: 0;
+      padding-right: 0;
+      flex-direction: column;
+    }
+
+    &__text {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-right: 4.6rem;
+      padding-left: 30.4rem;
+      background-color: #f0f0f0;
+
+      @include f.mq(md) {
+        padding-top: 12rem;
+      }
+    }
+
+    &__caption {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      line-height: 1.8;
+    }
+  }
 }
 
 // ==========================================
