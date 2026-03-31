@@ -1,31 +1,68 @@
 @use "../../foundation/" as f;
-@use "sass:color"; // color.adjust()を使うのに必須
-
-// ボタンデザイン
-
+// @use "sass:color"; // color.adjust()を使うのに必須
 // 共通のスタイルをc-buttonに書いて、.c-button--primary、.c-button--secondaryなどで固有スタイルを書くとよい
+
+// ==========================================
+// button style
+// ==========================================
 .c-button {
+  display: inline-block;
   padding: f.sp(18) f.sp(72);
   color: f.$text-color-w;
   border: f.$text-color-w solid 1px;
   border-radius: 50px;
   position: relative;
+  overflow: hidden;
+  z-index: 0;
+  text-decoration: none;
+
+  span {
+    position: relative; // 重なり順を明示するためテキストをspanタグに分離
+    z-index: 2;
+  }
+
   @include f.hover {
     &::after {
       right: 7%;
     }
   }
+
   &::after {
     content: "▶";
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: f.$text-color-w;
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: 8%;
-    transition: all 0.3s ease;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+    z-index: 2;
   }
 }
 
+.c-button-gradient {
+  background-image: f.$bg-gradient;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: f.$invert-gradient;
+    transform: translateX(100%); // 反転したグラデーションをボタンの右側に配置
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1;
+  }
+
+  @include f.hover {
+    &::before {
+      transform: translateX(
+        0
+      ); // 隠しておいた反転グラデーションがスライドしてくる
+    }
+  }
+}
+
+// 透明なボタン
 .c-button--trans {
   background-color: transparent;
   transition: all 0.3s ease;

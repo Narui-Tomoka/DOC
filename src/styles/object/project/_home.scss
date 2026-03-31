@@ -224,11 +224,32 @@
         max-width: 100%;
       }
     }
+    &__text {
+      margin-top: 1.5rem;
+    }
+    &__title {
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      text-align: center;
+    }
+    &__discription {
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+      margin-top: 1.5rem;
+      @include f.mq(md) {
+        margin-top: 1rem;
+      }
+    }
+    &__button {
+      margin-top: 3rem;
+    }
   }
 }
 
 // ==========================================
-// scroll animation
+// heroセクション scroll animation
 // ==========================================
 @keyframes scroll-line {
   0% {
