@@ -327,12 +327,6 @@
       object-fit: cover;
     }
 
-    // Swiperデフォルトの矢印アイコンを消す
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      content: "";
-    }
-
     &__button {
       position: absolute;
       top: 50%;

@@ -1,0 +1,6 @@
+// どのページのswiperにも必ず適用するスタイルのみ記載
+
+// Swiperデフォルトのprev,nextボタンを消す
+.swiper-navigation-icon {
+  display: none;
+}
