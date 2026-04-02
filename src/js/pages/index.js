@@ -7,10 +7,10 @@ import "../../styles/style.scss";
 // modules の読み込み
 // ================================
 
-// ページトップボタン/ハンバーガーメニューの開閉処理
+// ページトップボタン/ハンバーガーメニュー/swiperの処理を追加
 import { initPageTop } from "../modules/pagetop";
 import { initHamburger } from "../modules/hamburger";
-
+import { initSwiper } from "../modules/swiper";
 // ================================
 // 初期化処理
 // ================================
@@ -22,4 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ページトップボタンを初期化
   initPageTop();
+
+  // swiperを初期化
+  initSwiper();
 });

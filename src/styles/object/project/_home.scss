@@ -247,37 +247,174 @@
     }
   }
 
+  // ==========================================
+  // WORKS section
+  // ==========================================
   .p-works {
-    padding-top: 6rem;
-    padding-left: 7rem;
-    padding-right: 7rem;
-
-    display: flex;
-    flex-direction: row-reverse;
+    padding: 6rem 0; // 仮で数値入力
+    overflow: hidden; // 左にはみ出したスライダーを安全に見せる
 
     @include f.mq(md) {
-      padding-top: 3rem;
-      padding-left: 0;
-      padding-right: 0;
-      flex-direction: column;
+      padding: 4rem 0;
     }
 
-    &__text {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-      padding-right: 4.6rem;
-      padding-left: 30.4rem;
+    &__inner {
       background-color: #f0f0f0;
+      max-width: 1360px;
+      margin-inline: auto;
+      padding-inline: 3rem;
+
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 36rem;
+      align-items: center;
+      column-gap: 6rem;
+
+      @media screen and (min-width: 1320px) {
+        padding-inline: 0;
+      }
 
       @include f.mq(md) {
-        padding-top: 12rem;
+        display: block;
+        padding-inline: 1.5rem;
+      }
+    }
+    &__slider {
+      margin-left: -7rem;
+      min-width: 0;
+
+      @include f.mq(md) {
+        margin-left: 0;
       }
     }
 
-    &__caption {
+    &__content {
+      text-align: center;
+
+      @include f.mq(md) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__text {
       margin-top: 3rem;
-      font-size: 1.5rem;
-      line-height: 1.8;
+      font-size: 1.6rem;
+      line-height: 2;
+      color: #333;
+
+      @include f.mq(md) {
+        margin-top: 2.5rem;
+        text-align: left;
+      }
+    }
+  }
+
+  // ==========================================
+  // WORKS swiper
+  // ==========================================
+  .p-works-swiper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 4rem;
+
+    &__slide {
+      overflow: hidden;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    // Swiperデフォルトの矢印アイコンを消す
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      content: "";
+    }
+
+    &__button {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      width: 4.8rem;
+      height: 4.8rem;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transform: translateY(-50%);
+
+      @include f.mq(md) {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      &--prev {
+        left: 2rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1.4rem;
+          height: 1.4rem;
+          border-top: 4px solid f.$head-color;
+          border-left: 4px solid f.$head-color;
+          transform: translate(-35%, -50%) rotate(-45deg);
+        }
+
+        @include f.mq(md) {
+          left: 1rem;
+        }
+      }
+
+      &--next {
+        right: 2rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1.4rem;
+          height: 1.4rem;
+          border-top: 4px solid f.$head-color;
+          border-right: 4px solid f.$head-color;
+          transform: translate(-65%, -50%) rotate(45deg);
+        }
+
+        @include f.mq(md) {
+          right: 1rem;
+        }
+      }
+    }
+
+    &__pagination {
+      position: absolute;
+      right: 2rem;
+      bottom: 0 !important;
+      left: auto !important;
+      width: auto !important;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      @include f.mq(md) {
+        right: 1.5rem;
+      }
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 !important;
+        background-color: #c9c9c9;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: f.$head-color;
+      }
     }
   }
 }
