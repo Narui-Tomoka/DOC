@@ -251,17 +251,16 @@
   // WORKS section
   // ==========================================
   .p-works {
-    padding: 6rem 0; // 仮で数値入力
+    padding: 6rem 0 0; // 仮で数値入力
     overflow: hidden; // 左にはみ出したスライダーを安全に見せる
+    width: 90%; // 画面が小さくてもできるだけスライダーを大きく見せるため
+    margin: 0 auto;
 
     @include f.mq(md) {
       padding: 4rem 0;
     }
 
-    &__inner {
-      width: 90%;
-      margin: 0 auto;
-
+    &__flex-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -279,9 +278,12 @@
       background-color: #f0f0f0;
       text-align: center;
       width: 54%;
-      padding-top: 21rem;
-      padding-bottom: 21rem;
+      // padding-top: 21rem;
+      // padding-bottom: 21rem;
+      padding-top: clamp(10rem, 15vw, 30rem);
+      padding-bottom: clamp(10rem, 15vw, 30rem);
       padding-right: 3%;
+      aspect-ratio: 2/1;
 
       @include f.mq(md) {
         margin-top: 3rem;
@@ -316,8 +318,8 @@
   // ==========================================
   .p-works-swiper {
     width: 120%;
-    max-width: 75rem;
-    padding-bottom: 4rem;
+    max-width: 90rem;
+    padding-bottom: 3rem;
 
     &__slide {
       overflow: hidden;
