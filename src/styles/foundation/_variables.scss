@@ -5,7 +5,8 @@ $footer-bg: #120e19;
 $footer-copy: #a798b7;
 
 $head-color: #391e88;
-$text-color-w: #ffffff;
+$text-color-w: #fff;
+$text-color-b: #333;
 
 // グラデーションカラー
 $bg-gradient: linear-gradient(135deg, #7633a4 0%, #250d65 100%);
@@ -46,7 +47,6 @@ $font-sizes-tab: (
   // 本文に統合
   "20": 1.8rem,
   "32": 2.8rem,
-  "40": 3.2rem,
   "48": 4rem,
   "56": 4.8rem,
   "72": 5.6rem, // hero
@@ -57,8 +57,8 @@ $font-sizes-sp: (
   "72": 4rem,
   // hero
   "56": 3.2rem,
-  "48": 2.8rem,
-  "40": 2.4rem,
+  "48": 3.2rem,
+  "40": 3.2rem,
   "36": 3rem,
   "32": 2rem,
   "24": 1.6rem,
