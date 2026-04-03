@@ -12,3 +12,10 @@
     display: block;
   }
 }
+
+.u-lg-only {
+  display: none;
+  @include f.mq(lg) {
+    display: block;
+  }
+}
