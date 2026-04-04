@@ -275,7 +275,7 @@
       @include f.mq(md) {
         width: 100%;
         padding: 0 2rem;
-        margin-bottom: -20rem; // 仮数値
+        margin-bottom: -13rem;
       }
     }
 
@@ -294,7 +294,8 @@
         margin-top: 3rem;
         width: 100%;
         padding-right: 0;
-        padding-top: 20rem;
+        padding-top: 12rem;
+        padding-bottom: 6rem;
       }
     }
 
@@ -314,7 +315,7 @@
       color: #333;
 
       @include f.mq(md) {
-        margin-top: 2.5rem;
+        font-size: 1.4rem;
       }
     }
 
@@ -329,7 +330,7 @@
   .p-works-swiper {
     width: 120%;
     max-width: 90rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     @include f.mq(md) {
       width: 100%;
     }
