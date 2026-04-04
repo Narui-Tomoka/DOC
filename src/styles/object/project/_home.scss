@@ -258,6 +258,7 @@
 
     @include f.mq(md) {
       padding: 4rem 0;
+      width: 100%;
     }
 
     &__flex-container {
@@ -267,11 +268,15 @@
 
       @include f.mq(md) {
         display: block;
-        padding-inline: 1.5rem;
       }
     }
     &__slider {
       width: 46%;
+      @include f.mq(md) {
+        width: 100%;
+        padding: 0 2rem;
+        margin-bottom: -20rem; // 仮数値
+      }
     }
 
     &__content {
@@ -287,12 +292,18 @@
 
       @include f.mq(md) {
         margin-top: 3rem;
+        width: 100%;
+        padding-right: 0;
+        padding-top: 20rem;
       }
     }
 
     &__content--wrap {
       width: 78%;
       margin-left: auto; // スライダーと被らないよう右寄せ
+      @include f.mq(md) {
+        margin-right: auto;
+      }
     }
 
     &__text {
@@ -304,7 +315,6 @@
 
       @include f.mq(md) {
         margin-top: 2.5rem;
-        text-align: left;
       }
     }
 
@@ -320,6 +330,9 @@
     width: 120%;
     max-width: 90rem;
     padding-bottom: 3rem;
+    @include f.mq(md) {
+      width: 100%;
+    }
 
     &__slide {
       overflow: hidden;
