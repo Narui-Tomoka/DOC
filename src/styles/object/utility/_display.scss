@@ -1,6 +1,7 @@
 @use "../../foundation/" as f;
 
 .u-pc-only {
+  display: block;
   @include f.mq(md) {
     display: none;
   }

@@ -436,10 +436,18 @@
   // ==========================================
   .p-company {
     background: url(../../../images/bg-circle.png) no-repeat center/contain;
-    padding: 4rem 0;
+    padding: 14rem 0 4rem;
+
+    @include f.mq(md) {
+      padding: 6rem 0;
+    }
 
     &__inner {
       background: url(../../../images/bg-face.png) no-repeat center/contain;
+
+      @include f.mq(md) {
+        background: none;
+      }
     }
 
     &__lead {
