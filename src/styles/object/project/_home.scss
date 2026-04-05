@@ -20,16 +20,12 @@
     &__title {
       font-size: f.fs(72);
       color: f.$text-color-w;
-      line-height: 1.1;
-      letter-spacing: 0.05em;
     }
     &__subtitle {
       font-size: f.fs(24);
       color: f.$text-color-w;
       font-weight: normal;
       margin-top: 2rem;
-      line-height: 1.8;
-      letter-spacing: 0.1em;
     }
 
     &__button {
@@ -67,7 +63,6 @@
 
       &-text {
         writing-mode: vertical-rl;
-        letter-spacing: 0.2em;
       }
     }
   }
@@ -164,10 +159,8 @@
     &__date {
       // 日付部分
       font-size: 1.4rem;
-      line-height: 1.5;
       color: #333;
       white-space: nowrap;
-      letter-spacing: 0.1em;
     }
 
     &__label {
@@ -184,14 +177,11 @@
       flex: 1;
       min-width: 0;
       font-size: 1.4rem;
-      line-height: 1.8;
-      letter-spacing: 0.05em;
       color: #333;
 
       @include f.mq(md) {
         display: block;
         font-size: 1.4rem;
-        line-height: 1.8;
       }
     }
   }
@@ -229,14 +219,11 @@
     }
     &__title {
       font-size: 1.8rem;
-      letter-spacing: 0.05em;
       font-weight: 400;
       text-align: center;
     }
     &__discription {
       font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      line-height: 1.8;
       margin-top: 1.5rem;
       @include f.mq(md) {
         margin-top: 1rem;
@@ -310,8 +297,6 @@
     &__text {
       margin-top: 3rem;
       font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      line-height: 1.8;
       color: #333;
 
       @include f.mq(md) {
@@ -454,7 +439,6 @@
       font-size: f.fs(40);
       margin-top: 3rem;
       color: f.$text-color-b;
-      line-height: 1.5;
       > span {
         background: linear-gradient(transparent 70%, #f5f534 70%);
       }
@@ -462,7 +446,6 @@
 
     &__text {
       font-size: 1.5rem;
-      line-height: 1.8;
       color: f.$text-color-b;
       margin-top: 4rem;
       @include f.mq(md) {
