@@ -23,7 +23,6 @@
   &__link {
     font-size: 1.2rem;
     color: f.$text-color-w;
-    letter-spacing: 0.1em;
     transition: opacity 0.3s ease;
     @include f.hover {
       opacity: 0.7;
@@ -33,7 +32,6 @@
   &__copy {
     text-align: center;
     margin-top: 3rem;
-    letter-spacing: 0.05em;
 
     &-link {
       font-size: 1rem;
