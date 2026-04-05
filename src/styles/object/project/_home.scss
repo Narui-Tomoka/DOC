@@ -181,7 +181,6 @@
 
       @include f.mq(md) {
         display: block;
-        font-size: 1.4rem;
       }
     }
   }
@@ -296,12 +295,8 @@
 
     &__text {
       margin-top: 3rem;
-      font-size: 1.5rem;
+      font-size: f.fs(15);
       color: #333;
-
-      @include f.mq(md) {
-        font-size: 1.4rem;
-      }
     }
 
     &__button {
@@ -421,7 +416,7 @@
   // ==========================================
   .p-company {
     background: url(../../../images/bg-circle.png) no-repeat center/contain;
-    padding: 14rem 0 4rem;
+    padding: 14rem 0;
 
     @include f.mq(md) {
       padding: 6rem 0;
@@ -445,12 +440,23 @@
     }
 
     &__text {
-      font-size: 1.5rem;
+      font-size: f.fs(15);
       color: f.$text-color-b;
       margin-top: 4rem;
-      @include f.mq(md) {
-        font-size: 1.4rem;
-      }
+    }
+
+    &__button {
+      margin-top: 3rem;
+    }
+  }
+
+  // ==========================================
+  // RECRUIT section
+  // ==========================================
+  .p-recruit {
+    &__text {
+      margin-top: 3rem;
+      font-size: f.fs(15);
     }
 
     &__button {
