@@ -3,10 +3,10 @@
 .p-page-home {
   .p-hero {
     position: relative; // スクロールインジケーターの配置基準
-    padding: 32rem 0;
+    padding: 26rem 0;
     background: url(../../../images/hero.jpg) no-repeat center/cover;
     @include f.mq(md) {
-      padding: 28rem 0;
+      padding: 28.3rem 0 27.7rem;
     }
     &__inner {
       // l-innerに上書き・追加したい設定のみp-hero__innerで追加
