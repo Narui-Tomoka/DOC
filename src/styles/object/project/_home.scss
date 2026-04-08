@@ -250,7 +250,7 @@
     }
 
     &__inner {
-      width: 90%;
+      max-width: 1300px;
       margin: 0 auto;
     }
 
@@ -268,7 +268,7 @@
       @include f.mq(md) {
         width: 100%;
         padding: 0 2rem;
-        margin-bottom: -13rem;
+        margin-bottom: -12rem;
       }
     }
 
@@ -283,7 +283,7 @@
       padding-right: 2%;
 
       @include f.mq(md) {
-        margin-top: 3rem;
+        margin-top: 6rem;
         width: 100%;
         padding-right: 0;
         padding-top: 12rem;
@@ -422,9 +422,10 @@
   // ==========================================
   .p-company {
     background: url(../../../images/bg-circle.png) no-repeat center/contain;
-    padding: 14rem 0;
+    padding: 14rem 1.5rem; // innerに設定した背景画像が画面端につかないように1.5remにしている
 
     @include f.mq(md) {
+      background: url(../../../images/sp_bg-circle.png) no-repeat center/contain;
       padding: 6rem 0;
     }
 

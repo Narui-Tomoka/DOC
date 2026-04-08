@@ -8,3 +8,13 @@
     padding-inline: 0; // 画面幅に十分な余裕があればpaddingを消す
   }
 }
+
+.l-inner--wide {
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 1330px) {
+    padding-inline: 0;
+  }
+}
