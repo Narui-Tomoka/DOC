@@ -503,6 +503,22 @@
       object-fit: cover;
     }
   }
+
+  // ==========================================
+  // RECRUIT section
+  // ==========================================
+  .p-contact {
+    padding: 7rem 0;
+    background-color: #f0f0f0;
+
+    &__text {
+      margin-top: 3rem;
+    }
+
+    &__button {
+      margin-top: 2rem;
+    }
+  }
 }
 
 // ==========================================
