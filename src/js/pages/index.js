@@ -7,7 +7,8 @@ import "../../styles/style.scss";
 // modules の読み込み
 // ================================
 
-// ページトップボタン/ハンバーガーメニュー/swiperの処理を追加
+// 各種処理を読み込み
+import { initHeaderScroll } from "../modules/header";
 import { initPageTop } from "../modules/pagetop";
 import { initHamburger } from "../modules/hamburger";
 import { initSwiper } from "../modules/swiper";
@@ -17,6 +18,9 @@ import { initSwiper } from "../modules/swiper";
 
 // HTMLの読み込みが終わってから実行する
 document.addEventListener("DOMContentLoaded", () => {
+  // ヘッダーの処理を初期化
+  initHeaderScroll();
+
   // ハンバーガーメニューを初期化
   initHamburger();
 
