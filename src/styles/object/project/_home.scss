@@ -242,12 +242,16 @@
   .p-works {
     padding: 6rem 0 4rem;
     overflow: hidden; // 左にはみ出したスライダーを安全に見せる
-    width: 90%; // 画面が小さくてもできるだけスライダーを大きく見せるため
     margin: 0 auto;
 
     @include f.mq(md) {
       padding: 4rem 0;
       width: 100%;
+    }
+
+    &__inner {
+      width: 90%;
+      margin: 0 auto;
     }
 
     &__flex-container {
@@ -276,8 +280,7 @@
       // padding-bottom: 21rem;
       padding-top: clamp(10rem, 15vw, 30rem);
       padding-bottom: clamp(10rem, 15vw, 30rem);
-      padding-right: 3%;
-      aspect-ratio: 2/1;
+      padding-right: 2%;
 
       @include f.mq(md) {
         margin-top: 3rem;
@@ -289,7 +292,7 @@
     }
 
     &__content--wrap {
-      width: 78%;
+      width: 55%;
       margin-left: auto; // スライダーと被らないよう右寄せ
       @include f.mq(md) {
         margin-right: auto;
@@ -311,7 +314,7 @@
   // WORKS swiper
   // ==========================================
   .p-works-swiper {
-    width: 120%;
+    width: 145%;
     max-width: 90rem;
     padding-bottom: 2rem;
     @include f.mq(md) {
