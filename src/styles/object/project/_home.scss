@@ -72,12 +72,17 @@
   // ==========================================
   .p-news {
     // セクション全体の上下余白
-    padding: f.sp(70) 0;
+    padding: 7rem 0;
+
+    @include f.mq(md) {
+      padding: 4rem 0;
+    }
 
     &__inner {
       // PCでは「見出し」と「一覧」を横並びにする
       display: flex;
       align-items: flex-start;
+      width: fit-content;
 
       @include f.mq(md) {
         // スマホでは縦並びに変更
@@ -86,12 +91,13 @@
     }
 
     &__heading {
-      // 左側の見出しエリアの幅を固定気味にしておく
-      flex: 0 0 140px;
+      flex: 0 0 auto;
+      margin-right: 5rem;
 
       @include f.mq(md) {
         // スマホでは下に余白をつけて一覧と離す
         margin-bottom: 3rem;
+        margin-right: 0;
       }
     }
 
@@ -103,12 +109,6 @@
         text-align: center;
       }
     }
-
-    &__body {
-      // 右側のニュース一覧を残り幅いっぱいに広げる
-      flex: 1;
-      min-width: 0;
-    }
   }
 
   // ==========================================
@@ -117,14 +117,14 @@
   .p-news-list {
     &__item {
       // 各記事の間隔
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.5rem;
 
       &:last-child {
         margin-bottom: 0;
       }
 
       @include f.mq(md) {
-        margin-bottom: 2.4rem;
+        margin-bottom: 3rem;
       }
     }
 
@@ -145,7 +145,7 @@
       // 日付 + ラベルのまとまり
       display: flex;
       align-items: center;
-      flex: 0 0 190px;
+      flex: 0 0 auto;
       margin-right: 2rem;
 
       @include f.mq(md) {
@@ -174,8 +174,6 @@
 
     &__text {
       // ニュース本文
-      flex: 1;
-      min-width: 0;
       font-size: 1.4rem;
       color: #333;
 
@@ -189,7 +187,11 @@
   // SERVICE section
   // ==========================================
   .p-service {
-    padding: f.sp(70) 0;
+    padding: 7rem 0;
+
+    @include f.mq(md) {
+      padding: 4rem 0;
+    }
 
     &__list {
       display: flex;
