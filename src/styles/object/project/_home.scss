@@ -223,11 +223,12 @@
       font-weight: 400;
       text-align: center;
     }
-    &__discription {
+    &__description {
       font-size: 1.5rem;
       margin-top: 1.5rem;
       @include f.mq(md) {
         margin-top: 1rem;
+        font-size: 1.4rem;
       }
     }
     &__button {
@@ -239,7 +240,7 @@
   // WORKS section
   // ==========================================
   .p-works {
-    padding: 6rem 0 0;
+    padding: 6rem 0 4rem;
     overflow: hidden; // 左にはみ出したスライダーを安全に見せる
     width: 90%; // 画面が小さくてもできるだけスライダーを大きく見せるため
     margin: 0 auto;
