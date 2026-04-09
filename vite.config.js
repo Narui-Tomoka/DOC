@@ -14,6 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, "index.html"),
+        service: path.resolve(__dirname, "service.html"),
       },
       output: {
         assetFileNames: "assets/[name]-[hash][extname]", // CSSや画像のパスを一定に
