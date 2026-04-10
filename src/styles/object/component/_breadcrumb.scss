@@ -1,0 +1,45 @@
+@use "../../foundation/" as f;
+
+.c-breadcrumb {
+  background-color: #f5f5f5;
+  padding: 1.1rem 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: ">";
+      margin: 0 0.8rem;
+      color: #999;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+  }
+
+  &__link,
+  &__current {
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    color: f.$head-color;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    @include f.hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__current {
+    color: #666;
+  }
+}
