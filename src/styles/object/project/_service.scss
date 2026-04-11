@@ -17,5 +17,80 @@
   // ==========================================
   .p-service {
     padding: 7rem 0 11rem;
+
+    @include f.mq(md) {
+      padding: 4rem 0 8rem;
+    }
+
+    &__item {
+      display: flex;
+      margin-top: 6rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include f.mq(md) {
+        flex-direction: column;
+        margin-top: 4rem;
+      }
+    }
+
+    &__img {
+      width: 40%;
+
+      @include f.mq(md) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      width: 60%;
+      padding-left: 5rem;
+
+      @include f.mq(md) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      font-weight: 400;
+
+      @include f.mq(md) {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+      }
+    }
+
+    &__description {
+      margin-top: 2rem;
+
+      @include f.mq(md) {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  // ==========================================
+  // SERVICE section
+  // ==========================================
+  .p-contact {
+    padding: 7rem 0;
+    background-color: #f0f0f0;
+
+    &__text {
+      margin-top: 3rem;
+    }
+
+    &__button {
+      margin-top: 2rem;
+    }
   }
 }
