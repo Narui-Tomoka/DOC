@@ -1,5 +1,9 @@
 @use "../../foundation/" as f;
 
+#news-archive {
+  scroll-margin-top: 5rem;
+}
+
 .p-page-news {
   .p-hero {
     background: url(@/images/hero.jpg) no-repeat center/cover;
