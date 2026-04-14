@@ -1,0 +1,107 @@
+@use "../../foundation/" as f;
+
+.p-page-news {
+  .p-hero {
+    background: url(@/images/hero.jpg) no-repeat center/cover;
+    padding: 8.8rem 0;
+    color: f.$text-color-w;
+    font-size: f.fs(36);
+
+    &-heading__sub {
+      color: f.$text-color-w;
+    }
+  }
+
+  // ==========================================
+  // NEWS section
+  // ==========================================
+  .p-news {
+    padding: 7rem 0 11rem;
+  }
+
+  .p-news-list {
+    &__item {
+      // 各記事の間隔
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include f.mq(md) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__link {
+      // 1件分をクリックできるようにする
+      display: flex;
+      align-items: flex-start;
+      text-decoration: none;
+      color: inherit;
+
+      @include f.mq(md) {
+        // スマホでは meta の下に本文が来るように縦並び
+        display: block;
+      }
+    }
+
+    &__meta {
+      // 日付 + ラベルのまとまり
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      margin-right: 2rem;
+
+      @include f.mq(md) {
+        // スマホでは本文の上に来るので横幅固定を解除
+        flex: none;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__date {
+      // 日付部分
+      font-size: 1.4rem;
+      color: #333;
+      white-space: nowrap;
+      min-width: 8.5rem;
+    }
+
+    &__label {
+      // カテゴリーラベル
+      @include f.label;
+
+      @include f.mq(md) {
+        margin-left: 1.2rem;
+      }
+    }
+
+    &__text {
+      // ニュース本文
+      font-size: 1.4rem;
+      color: #333;
+
+      @include f.mq(md) {
+        display: block;
+      }
+    }
+  }
+
+  // ==========================================
+  // CONTACT section
+  // ==========================================
+  .p-contact {
+    padding: 7rem 0;
+    background-color: #f0f0f0;
+
+    &__text {
+      margin-top: 3rem;
+    }
+
+    &__button {
+      margin-top: 2rem;
+    }
+  }
+}

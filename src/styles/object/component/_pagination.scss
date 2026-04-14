@@ -1,0 +1,80 @@
+@use "../../foundation/" as f;
+
+.c-pagination {
+  margin-top: 4rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: f.$text-color-w;
+
+    // ===== ベースのグラデーション =====
+    background-image: f.$bg-gradient;
+
+    // ===== 疑似要素の準備 =====
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    // テキストを前面に出す
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    // ===== スライド用レイヤー =====
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: f.$invert-gradient;
+
+      // 最初は右側に隠しておく
+      transform: translateX(100%);
+
+      // なめらかなスライド
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+      z-index: 1;
+    }
+
+    // ===== hover時 =====
+    @include f.hover {
+      &::before {
+        // 左へスライドして全体を覆う
+        transform: translateX(0);
+      }
+    }
+
+    // ===== 現在ページ =====
+    &.is-current {
+      background: #f1ebf8;
+      color: #333;
+      pointer-events: none;
+
+      // アニメーション無効化
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
