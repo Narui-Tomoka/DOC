@@ -13,6 +13,72 @@
   }
 
   // ==========================================
+  // WORKS section
+  // ==========================================
+  .p-works {
+    padding: 7rem 0 11rem;
+
+    @include f.mq(md) {
+      padding: 4rem 0 8rem;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3rem;
+      row-gap: 3rem;
+
+      @include f.mq(lg) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include f.mq(md) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .p-works-card {
+    display: block;
+    text-decoration: none;
+
+    &__image {
+      overflow: hidden;
+      border: 1px solid #ececec;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &__name {
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      color: f.$text-color-b;
+      text-align: center;
+    }
+
+    @include f.hover {
+      .p-works-card__img {
+        transform: scale(1.03);
+      }
+
+      .p-works-card__name {
+        opacity: 0.8;
+      }
+    }
+
+    &__img,
+    &__name {
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+  }
+
+  // ==========================================
   // CONTACT section
   // ==========================================
   .p-contact {
