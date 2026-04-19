@@ -16,20 +16,28 @@
   // company section
   // ==========================================
   .p-company {
-    background: url(../../../images/bg-circle.png) no-repeat center/contain;
-    padding: 10rem 1.5rem; // innerに設定した背景画像が画面端につかないように1.5remにしている
+    padding: 0 7rem;
 
+    &__inner {
+      background:
+        url(../../../images/bg-circle.png), url(../../../images/bg-face.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, center;
+      background-size: contain, contain;
+      padding: 10rem 0;
+    }
     @include f.mq(md) {
       background: url(../../../images/sp_bg-circle.png) no-repeat center/contain;
       padding: 6rem 0;
     }
 
-    &__inner {
-      background: url(../../../images/bg-face.png) no-repeat center/contain;
-      padding: 0 7rem;
+    &__heading {
+      font-size: 3.2rem;
+      color: f.$head-color;
+      text-align: center;
 
       @include f.mq(md) {
-        background: none;
+        font-size: 2.4rem;
       }
     }
 
@@ -46,6 +54,58 @@
       font-size: f.fs(15);
       color: f.$text-color-b;
       margin-top: 4rem;
+    }
+
+    &__ceo {
+      display: flex;
+
+      @include f.mq(md) {
+        flex-direction: column;
+      }
+    }
+
+    &__ceo-img {
+      width: 40%;
+
+      @include f.mq(md) {
+        width: 100%;
+      }
+    }
+
+    &__ceo-image {
+      width: 100%;
+    }
+
+    &__ceo-text {
+      width: 60%;
+      padding-left: clamp(2rem, calc(7.14vw + -1.43rem), 5rem);
+
+      @include f.mq(md) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+    }
+
+    &__ceo-msg {
+      font-size: 1.5rem;
+
+      @include f.mq(md) {
+        font-size: 1.4rem;
+      }
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+
+    &__ceo-name {
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-top: 1em;
+
+      @include f.mq(md) {
+        font-size: 1.4rem;
+      }
     }
   }
 
