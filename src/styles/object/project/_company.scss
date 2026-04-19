@@ -13,9 +13,40 @@
   }
 
   // ==========================================
-  // message section
+  // company section
   // ==========================================
-  .p-message {
+  .p-company {
+    background: url(../../../images/bg-circle.png) no-repeat center/contain;
+    padding: 10rem 1.5rem; // innerに設定した背景画像が画面端につかないように1.5remにしている
+
+    @include f.mq(md) {
+      background: url(../../../images/sp_bg-circle.png) no-repeat center/contain;
+      padding: 6rem 0;
+    }
+
+    &__inner {
+      background: url(../../../images/bg-face.png) no-repeat center/contain;
+      padding: 0 7rem;
+
+      @include f.mq(md) {
+        background: none;
+      }
+    }
+
+    &__lead {
+      font-size: f.fs(40);
+      margin-top: 3rem;
+      color: f.$text-color-b;
+      > span {
+        background: linear-gradient(transparent 70%, #f5f534 70%);
+      }
+    }
+
+    &__text {
+      font-size: f.fs(15);
+      color: f.$text-color-b;
+      margin-top: 4rem;
+    }
   }
 
   // ==========================================
