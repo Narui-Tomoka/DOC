@@ -16,7 +16,11 @@
   // company section
   // ==========================================
   .p-company {
-    padding: 0 7rem;
+    padding: 0 7rem 7rem;
+
+    @include f.mq(md) {
+      padding: 0 0 5rem;
+    }
 
     &__inner {
       background:
@@ -25,10 +29,11 @@
       background-position: center, center;
       background-size: contain, contain;
       padding: 10rem 0;
-    }
-    @include f.mq(md) {
-      background: url(../../../images/sp_bg-circle.png) no-repeat center/contain;
-      padding: 6rem 0;
+      @include f.mq(md) {
+        background: url(../../../images/sp_bg-circle.png) no-repeat
+          center/contain;
+        padding: 6rem 0;
+      }
     }
 
     &__heading {
@@ -105,6 +110,93 @@
 
       @include f.mq(md) {
         font-size: 1.4rem;
+      }
+    }
+  }
+
+  // ==========================================
+  // company-info section
+  // ==========================================
+  .p-company-info {
+    // SPの上下左右の間隔調整
+    padding: 7rem 7rem 6rem;
+    @include f.mq(md) {
+      padding: 5rem 0 4rem;
+    }
+    &__list {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      @include f.mq(md) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 3rem 0;
+      border-bottom: 1px solid #ddd;
+
+      @include f.mq(md) {
+        display: block;
+        padding: 2rem 0;
+      }
+    }
+
+    &__term {
+      width: 20%;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      @include f.mq(md) {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+    }
+
+    &__description {
+      flex: 1;
+      min-width: 0;
+      width: 80%;
+      font-size: 1.5rem;
+    }
+
+    &__map-area {
+      margin-top: 6rem;
+
+      @include f.mq(md) {
+        margin-top: 4rem;
+      }
+    }
+
+    &__map {
+      aspect-ratio: 1110 / 400;
+      overflow: hidden;
+
+      @include f.mq(md) {
+        aspect-ratio: 345 / 220;
+      }
+    }
+
+    &__map-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    &__map-link {
+      display: inline-block;
+      margin-top: 1rem;
+
+      font-size: f.fs(14);
+
+      transition: opacity 0.3s ease;
+
+      @include f.hover {
+        opacity: 0.7;
       }
     }
   }
