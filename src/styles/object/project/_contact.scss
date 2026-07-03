@@ -1,0 +1,14 @@
+@use "../../foundation/" as f;
+
+.p-page-contact {
+  .p-hero {
+    background: url(@/images/hero.jpg) no-repeat center/cover;
+    padding: 8.8rem 0;
+    color: f.$text-color-w;
+    font-size: f.fs(36);
+
+    &-heading__sub {
+      color: f.$text-color-w;
+    }
+  }
+}
