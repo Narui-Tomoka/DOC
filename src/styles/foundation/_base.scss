@@ -73,6 +73,10 @@ textarea:focus {
   outline: none; /* デフォルトの枠を消す */
 }
 
+input[type="radio"] {
+  display: none;
+}
+
 :root {
   // 余白の書き出し
   // vにある$spacesから値を引っ張ってくる

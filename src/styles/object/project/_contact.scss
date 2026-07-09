@@ -11,4 +11,59 @@
       color: f.$text-color-w;
     }
   }
+
+  // ==========================================
+  // contact section
+  // ==========================================
+  .p-contact {
+    padding: 7rem 0 11rem;
+    &__lead {
+      text-align: center;
+    }
+
+    &__form {
+      padding: 9rem 6rem 9rem 9rem;
+      width: 100%;
+      background-color: #f7f7f7;
+      margin-top: 4rem;
+      @include f.mq(md) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__label {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    &__required {
+      font-size: 1.2rem;
+      color: #391e88;
+    }
+
+    &__radio {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 3.5rem;
+      margin-top: 1rem;
+    }
+
+    &__radio-list :last-child {
+      margin-right: 0;
+    }
+
+    &__radio-input {
+      margin-right: 0.5rem;
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+      border: 1px solid #aaa;
+      border-radius: 50%;
+    }
+
+    &__radio-text {
+      font-size: 1.5rem;
+    }
+  }
 }

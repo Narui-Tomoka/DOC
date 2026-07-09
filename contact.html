@@ -14,7 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link rel="icon" href="src/images/favicon.ico" />
-    <title>PON DESIGN | お知らせ</title>
+    <title>PON DESIGN | お問い合わせ</title>
   </head>
   <body class="p-page-contact">
     <header id="header" class="l-header">
@@ -149,7 +149,172 @@
         </div>
       </nav>
 
-      <section id="contact" class=""></section>
+      <section id="contact" class="p-contact">
+        <div class="p-contact__inner l-inner--narrow">
+          <p class="p-contact__lead u-ls-05 u-lh-18">
+            Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。
+          </p>
+          <form class="p-contact__form" action="#" method="post">
+            <!-- お問い合わせ種別 -->
+            <fieldset class="p-contact__field p-contact__field--radio">
+              <legend class="p-contact__label u-ls-05 u-lh-18">
+                お問い合わせ種別
+                <span class="p-contact__required u-ls-05 u-lh-12">*必須</span>
+              </legend>
+
+              <div class="p-contact__radio-list">
+                <label class="p-contact__radio">
+                  <input
+                    type="radio"
+                    name="contact-type"
+                    value="work"
+                    class="p-contact__radio-input"
+                    required
+                  />
+                  <span class="p-contact__radio-text"
+                    >お仕事のご依頼・ご相談</span
+                  >
+                </label>
+
+                <label class="p-contact__radio">
+                  <input
+                    type="radio"
+                    name="contact-type"
+                    value="estimate"
+                    class="p-contact__radio-input"
+                  />
+                  <span class="p-contact__radio-text">お見積りのご依頼</span>
+                </label>
+
+                <label class="p-contact__radio">
+                  <input
+                    type="radio"
+                    name="contact-type"
+                    value="recruit"
+                    class="p-contact__radio-input"
+                  />
+                  <span class="p-contact__radio-text">採用について</span>
+                </label>
+
+                <label class="p-contact__radio">
+                  <input
+                    type="radio"
+                    name="contact-type"
+                    value="other"
+                    class="p-contact__radio-input"
+                  />
+                  <span class="p-contact__radio-text">その他</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- お名前 -->
+            <div class="p-contact__field">
+              <label for="name" class="p-contact__label">
+                お名前
+                <span class="p-contact__required">*必須</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="p-contact__input"
+                required
+              />
+            </div>
+
+            <!-- 会社名 -->
+            <div class="p-contact__field">
+              <label for="company" class="p-contact__label">
+                会社名
+                <span class="p-contact__required">*必須</span>
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="p-contact__input"
+                required
+              />
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="p-contact__field">
+              <label for="email" class="p-contact__label">
+                メールアドレス
+                <span class="p-contact__required">*必須</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="p-contact__input"
+                required
+              />
+            </div>
+
+            <!-- 電話番号 -->
+            <div class="p-contact__field">
+              <label for="tel" class="p-contact__label">
+                電話番号
+                <span class="p-contact__note">半角数字ハイフンなし</span>
+              </label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                class="p-contact__input"
+                inputmode="tel"
+              />
+            </div>
+
+            <!-- お問い合わせ内容 -->
+            <div class="p-contact__field">
+              <label for="message" class="p-contact__label">
+                お問い合わせ内容
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="p-contact__textarea"
+                placeholder="お問い合わせ内容を具体的にご記入くださいませ。"
+              ></textarea>
+            </div>
+
+            <!-- きっかけ -->
+            <div class="p-contact__field">
+              <label for="trigger" class="p-contact__label">
+                PON DESIGNをどちらでお知りになりましたか？
+                <span class="p-contact__required">＊必須</span>
+              </label>
+
+              <select
+                id="trigger"
+                name="trigger"
+                class="p-contact__select"
+                required
+              >
+                <option value="">選択してください</option>
+                <option value="google-yahoo">Google/Yahoo検索</option>
+                <option value="sns">SNS</option>
+                <option value="blog">ブログ</option>
+                <option value="friend">友人や知人</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="p-contact__button">
+              <button
+                type="submit"
+                class="c-button c-button-gradient u-font-mont-bold u-ls-10 u-fs-14"
+              >
+                <span>送信する</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer id="footer" class="l-footer">

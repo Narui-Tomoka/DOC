@@ -119,7 +119,7 @@
   // ==========================================
   .p-company-info {
     // SPの上下左右の間隔調整
-    padding: 7rem 7rem 6rem;
+    padding: 7rem 7rem 14rem;
     @include f.mq(md) {
       padding: 5rem 0 4rem;
     }
