@@ -35,11 +35,16 @@
       font-weight: bold;
       font-size: 1.5rem;
       color: #333;
+
+      // 「（半角数字ハイフンなし）」の文字の調整用
+      display: inline-flex;
+      align-items: center;
     }
 
     &__required {
       font-size: 1.2rem;
       color: #391e88;
+      padding-left: 1rem;
     }
 
     &__radio {
@@ -64,6 +69,51 @@
 
     &__radio-text {
       font-size: 1.5rem;
+    }
+
+    &__field {
+      margin-top: 3rem;
+    }
+
+    &__input,
+    &__textarea,
+    &__select {
+      display: block;
+      margin-top: 0.5rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 1rem;
+      &::placeholder {
+        color: #757575;
+      }
+    }
+
+    &__input,
+    &__select {
+      width: 30rem;
+      max-width: 30rem;
+    }
+
+    &__note {
+      font-weight: 400;
+      font-size: 1.2rem;
+      padding-left: 0.5rem;
+    }
+
+    &__textarea {
+      width: 100%;
+      max-width: 60rem;
+      height: 20rem;
+      padding: 1rem;
+    }
+
+    &__select {
+      color: #333;
+    }
+
+    &__button {
+      margin-top: 5rem;
+      text-align: center;
     }
   }
 }
