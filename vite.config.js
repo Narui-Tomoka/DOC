@@ -4,14 +4,14 @@ import path from "path";
 
 export default defineConfig({
   root: ".", // index.html があるディレクトリ
-  base: "/doc/",
+  base: "/DOC/",
   server: {
     open: true,
   },
   build: {
     outDir: "dist",
     assetsDir: "assets", // ← assets フォルダを固定名にしておくとパスが安定する！
-    emptyOutDir: true,
+    emptyOutDir: true, // ビルド時に既にあるdistを削除してリセットしてくれる
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, "index.html"),
